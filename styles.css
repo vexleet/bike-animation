@@ -1,0 +1,48 @@
+.bike-wrapper {
+    position: relative;
+    width: 500px;
+    left: -300px;
+    animation: moveBike 1.2s ease-out forwards;
+}
+
+.bike-frame {
+    width: 100%;
+}
+
+.front-wheel,
+.back-wheel {
+    width: 206px;
+    position: absolute;
+    z-index: -1;
+    transform-origin: center center;
+    animation: rotateWheel 1.2s ease-out forwards;
+}
+
+.back-wheel {
+    bottom: 0;
+}
+
+.front-wheel {
+    right: -3px;
+    bottom: 5px;
+}
+
+@keyframes moveBike {
+    from {
+        left: -300px;
+    }
+
+    to {
+        left: 300px;
+    }
+}
+
+@keyframes rotateWheel {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
